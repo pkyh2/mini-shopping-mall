@@ -1,19 +1,36 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
+// 각 페이지 url 설정
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'Home',
+    component: () => import(/* webpackChunkName: "about" */ '../views/ProductList.vue')
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/detail',
+    name: 'ProductDetail',
+    component: () => import(/* webpackChunkName: "detail" */ '../views/ProductDetail.vue')
+  },
+  {
+    path: '/create',
+    name: 'ProductCreate',
+    component: () => import(/* webpackChunkName: "create" */ '../views/ProductCreate.vue')
+  },
+  {
+    path: '/update',
+    name: 'ProductUpdate',
+    component: () => import(/* webpackChunkName: "update" */ '../views/ProductUpdate.vue')
+  },
+  {
+    path: '/sales',
+    name: 'SalesList',
+    component: () => import(/* webpackChunkName: "sales" */ '../views/SalesList.vue')
+  },
+  {
+    path: '/image_insert',
+    name: 'ImageInsert',
+    component: () => import(/* webpackChunkName: "image_insert" */ '../views/ImageInsert.vue')
   }
 ]
 
