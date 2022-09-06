@@ -135,43 +135,43 @@
         .input-contents {
           margin-left: auto;
         }
-        .adjust-btn {
+      }
+      .adjust-btn {
+        display: flex;
+        justify-content: space-between;
+        .cancel-btn {
+          width: 48%;
+          height: 48px;
+          background: #18C050;
+          border-radius: 10px;
           display: flex;
-          justify-content: space-between;
-          .cancel-btn {
-            width: 48%;
-            height: 48px;
-            background: #18C050;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 500;
+          align-items: center;
+          justify-content: center;
+          font-weight: 500;
+          font-size: 15px;
+          color: #fff;
+          cursor: pointer;
+          @media screen and(max-width: 768px) {
             font-size: 15px;
-            color: #fff;
-            cursor: pointer;
-            @media screen and(max-width: 768px) {
-              font-size: 15px;
-              height: 42px;
-            }
+            height: 42px;
           }
-          .lower-btn {
-            width: 48%;
-            height: 48px;
-            background: #003300;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 500;
+        }
+        .lower-btn {
+          width: 48%;
+          height: 48px;
+          background: #003300;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 500;
+          font-size: 15px;
+          color: #fff;
+          margin-left: auto;
+          cursor: pointer;
+          @media screen and(max-width: 768px) {
             font-size: 15px;
-            color: #fff;
-            margin-left: auto;
-            cursor: pointer;
-            @media screen and(max-width: 768px) {
-              font-size: 15px;
-              height: 42px;
-            }
+            height: 42px;
           }
         }
       }
